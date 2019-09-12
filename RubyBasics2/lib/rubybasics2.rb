@@ -8,7 +8,12 @@ end
 
 # Part II
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  consonant = /[a-z&&[^aeiou]]/i
+  if s[0] =~ consonant
+    return true
+  else
+    return false
+  end
 end
 
 # Part III
