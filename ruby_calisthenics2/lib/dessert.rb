@@ -10,7 +10,11 @@ class Dessert
     end
   end
   def delicious?
-    return true
+    if name == "licorice jelly bean"
+      return false
+    else
+      return true
+    end
   end
 end
 
