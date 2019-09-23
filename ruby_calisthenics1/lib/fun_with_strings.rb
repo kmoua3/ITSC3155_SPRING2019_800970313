@@ -10,7 +10,7 @@ module FunWithStrings
     wordCount
   end
   def anagram_groups
-    # your code here
+    str = self.downcase.split.group_by{ |x| x.chars.sort }.values
   end
 end
 
