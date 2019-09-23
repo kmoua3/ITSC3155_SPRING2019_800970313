@@ -4,7 +4,10 @@ module FunWithStrings
     str == str.reverse
   end
   def count_words
-    # your code here
+    wordCount = Hash.new(0)
+    str = self.downcase.gsub(/[^a-z0-9 ]+/i, '')
+    str.split.each { |x| wordCount[x] = wordCount[x] + 1 }
+    wordCount
   end
   def anagram_groups
     # your code here
