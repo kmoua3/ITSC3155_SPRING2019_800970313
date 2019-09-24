@@ -8,5 +8,12 @@ class BookInStock
         @price = price
         
         raise ArgumentError if @isbn.empty? || @price <= 0
+        
+    end
+    
+    def price_as_string
+       
+       return "$%.2f" % price
+        
     end
 end
