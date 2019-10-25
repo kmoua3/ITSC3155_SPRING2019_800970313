@@ -10,18 +10,22 @@ class ArticlesController < ApplicationController
     
     def create
         @article = Article.new(article_params)
+        byebug
         
         if @article.save
+            byebug
             redirect_to @article
         else
             render 'new'
         end
         
-        def show
-       @article = Article.find(params[:id]) 
-        end
+        
     end
     
+    def show
+       @article = Article.find(params[:id]) 
+    end
+        
     def edit
         @article = Article.find(params[:id])
     end
